@@ -1,0 +1,61 @@
+<header class="header">
+    <div class="container header-content">
+        <!-- Logo -->
+        <a routerLink="/" class="logo">
+            <span class="logo-text">SC<span class="dot">.</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                        class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/skills" routerLinkActive="active" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/experience" routerLinkActive="active" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/projects" routerLinkActive="active" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/learning" routerLinkActive="active" class="nav-link">Learning</a>
+                </li>
+            </ul>
+            <a routerLink="/contact" class="btn-contact">Contact Me</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation" [class.active]="isMenuOpen">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" [class.open]="isMenuOpen">
+        <div class="mobile-header">
+            <span class="logo-text">Menu</span>
+            <button class="close-btn" (click)="toggleMenu()">×</button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li (click)="toggleMenu()"><a routerLink="/">Home</a></li>
+            <li (click)="toggleMenu()"><a routerLink="/about">About</a></li>
+            <li (click)="toggleMenu()"><a routerLink="/skills">Skills</a></li>
+            <li (click)="toggleMenu()"><a routerLink="/experience">Experience</a></li>
+            <li (click)="toggleMenu()"><a routerLink="/projects">Projects</a></li>
+            <li (click)="toggleMenu()"><a routerLink="/learning">Learning</a></li>
+            <li (click)="toggleMenu()"><a routerLink="/contact" class="mobile-contact-btn">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>

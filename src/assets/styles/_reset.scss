@@ -1,0 +1,70 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: $font-family-sans;
+    background-color: $color-bg-dark;
+    color: $color-text-main;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $color-accent;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+
+    @media (max-width: $tablet) {
+        padding: 0 $spacing-sm;
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-xl;
+    text-align: center;
+    color: $color-text-main;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: $color-accent;
+        margin: $spacing-xs auto 0;
+        border-radius: 2px;
+    }
+}

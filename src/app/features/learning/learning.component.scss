@@ -1,0 +1,90 @@
+@use 'assets/styles/variables' as *;
+
+.learning-section {
+    padding: $spacing-xl 0;
+    background-color: $color-bg-dark;
+}
+
+.learning-intro {
+    max-width: 700px;
+    margin: 0 auto $spacing-xl auto;
+    text-align: center;
+
+    p {
+        font-size: 1.1rem;
+        color: $color-text-muted;
+    }
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-xl;
+}
+
+.learning-card {
+    background-color: $color-bg-card;
+    border: 1px solid $color-border;
+    padding: $spacing-lg;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        border-color: $color-accent; // Highlight border
+    }
+
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $spacing-md;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+
+        &.angular {
+            background: linear-gradient(135deg, #dd0031, #c3002f);
+        }
+
+        &.docker {
+            background: linear-gradient(135deg, #0db7ed, #384d54);
+        }
+
+        &.k8s {
+            background: linear-gradient(135deg, #326ce5, #b9c6e5);
+        }
+
+        &.aws {
+            background: linear-gradient(135deg, #ff9900, #ffc46d);
+        }
+    }
+
+    h3 {
+        margin-bottom: $spacing-sm;
+        color: $color-text-main;
+    }
+
+    p {
+        flex: 1;
+        font-size: 0.95rem;
+        color: $color-text-muted;
+        margin-bottom: $spacing-md;
+    }
+
+    .status-badge {
+        padding: 0.3rem 0.8rem;
+        background-color: rgba($color-accent, 0.1);
+        color: $color-accent;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: $font-weight-medium;
+    }
+}

@@ -1,0 +1,27 @@
+/* Corporate Color Palette */
+$color-primary-dark: #0f172a;  // Deep Slate Blue
+$color-primary-light: #1e293b; // Lighter Slate
+$color-accent: #0ea5e9;        // Professional Blue
+$color-text-main: #f8fafc;     // Off-white for dark bg
+$color-text-muted: #94a3b8;    // Muted grey text
+$color-bg-dark: #020617;       // Very dark background
+$color-bg-card: #1e293b;       // Card background
+$color-border: #334155;        // Subtle border
+
+/* Typography */
+$font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+/* Spacing */
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+/* Breakpoints */
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;

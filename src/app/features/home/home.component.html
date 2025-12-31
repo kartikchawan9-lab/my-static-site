@@ -1,0 +1,110 @@
+<!-- Pokemon Intro Animation Overlay -->
+<div class="pokemon-intro-overlay">
+    <div class="intro-scene">
+        <!-- CSS Animated Realistic Building -->
+        <div class="css-building">
+            <div class="roof-top"></div>
+            <div class="building-body">
+
+                <!-- Top Floor with Windows -->
+                <div class="top-floor">
+                    <div class="window left-window">
+                        <div class="glass"></div>
+                    </div>
+                    <div class="window right-window">
+                        <div class="glass"></div>
+                    </div>
+                </div>
+
+                <!-- Balcony Section -->
+                <div class="balcony-section">
+                    <div class="balcony-railing">
+                        <span class="rail"></span><span class="rail"></span><span class="rail"></span><span
+                            class="rail"></span>
+                        <span class="rail"></span><span class="rail"></span><span class="rail"></span>
+                    </div>
+                    <div class="balcony-floor"></div>
+                </div>
+
+                <!-- Ground Floor with Door -->
+                <div class="ground-floor">
+                    <div class="pillar left-pillar"></div>
+
+                    <div class="door-frame">
+                        <div class="door-left">
+                            <div class="handle"></div>
+                        </div>
+                        <div class="door-right">
+                            <div class="handle"></div>
+                        </div>
+                        <div class="door-arch"></div>
+                    </div>
+
+                    <div class="pillar right-pillar"></div>
+                </div>
+            </div>
+
+            <!-- Base/Steps -->
+            <div class="building-base">
+                <div class="step step-1"></div>
+                <div class="step step-2"></div>
+            </div>
+        </div>
+
+        <!-- Pokemon appears on the Balcony -->
+        <div class="pokemon-sprite" [style.color]="currentPokemon.color">
+            {{ currentPokemon.icon }}
+        </div>
+    </div>
+    <div class="intro-text">
+        Welcome to my Portfolio!
+        <div class="pokemon-name" [style.color]="currentPokemon.color">{{ currentPokemon.name }} is greeting you from
+            the castle!</div>
+    </div>
+</div>
+
+<!-- Main Hero Section -->
+<section class="hero-section" appScrollReveal>
+    <div class="container hero-content">
+        <div class="hero-text-content">
+            <div class="greeting-badge">Welcome to my portfolio</div>
+            <h1 class="title">
+                <span class="name">Shambuling Chawan</span>
+                <span class="role">Software Engineer</span>
+            </h1>
+            <p class="bio">
+                Building scalable backend systems with <strong>ASP.NET Core</strong> and modern frontends with
+                <strong>Angular</strong> & <strong>Azure</strong>.
+                Passionate about clean code and cloud-native solutions.
+            </p>
+
+            <div class="cta-group">
+                <button (click)="downloadResume()" class="btn btn-primary">Download Resume 📥</button>
+                <a routerLink="/contact" class="btn btn-outline">Contact Me 📧</a>
+            </div>
+
+            <div class="tech-stack-preview">
+                <p>Core Technologies</p>
+                <div class="badges">
+                    <span>Angular 19</span>
+                    <span>.NET 8</span>
+                    <span>Azure</span>
+                    <span>SQL Server</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="profile-card">
+                <div class="floating-elements">
+                    <div class="float-item">&lt;Code /&gt;</div>
+                    <div class="float-item">&#123; API &#125;</div>
+                    <div class="float-item">Cloud ☁️</div>
+                </div>
+                <div class="profile-img-placeholder"></div>
+                <h3>Shambuling</h3>
+                <p>Full Stack Dev</p>
+            </div>
+        </div>
+    </div>
+</section>

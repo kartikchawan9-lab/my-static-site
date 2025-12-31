@@ -1,0 +1,100 @@
+@use 'assets/styles/variables' as *;
+
+.experience-section {
+    padding: $spacing-xl 0;
+    background-color: $color-bg-dark;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background-color: $color-bg-card;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        border-color: $color-accent;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.card-header {
+    padding: $spacing-lg;
+    border-bottom: 1px solid rgba($color-border, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba($color-primary-light, 0.5);
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+}
+
+.company-info {
+    .company-name {
+        font-size: 1.5rem;
+        color: $color-text-main;
+        margin-bottom: 0.2rem;
+    }
+
+    .location {
+        font-size: 0.9rem;
+        color: $color-text-muted;
+    }
+}
+
+.job-meta {
+    text-align: right;
+
+    @media (max-width: $mobile) {
+        text-align: left;
+    }
+
+    .role {
+        display: block;
+        font-size: 1.1rem;
+        color: $color-accent;
+        font-weight: $font-weight-medium;
+        margin-bottom: 0.2rem;
+    }
+
+    .duration {
+        font-size: 0.9rem;
+        color: $color-text-muted;
+        font-style: italic;
+    }
+}
+
+.card-body {
+    padding: $spacing-lg;
+
+    .responsibilities {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+
+        li {
+            margin-bottom: $spacing-sm;
+            color: $color-text-muted;
+            line-height: 1.6;
+
+            strong {
+                color: $color-text-main;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@use 'assets/styles/variables' as *;
+
+.contact-section {
+    padding: $spacing-xl 0;
+    background-color: $color-bg-dark;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-xl;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+}
+
+.contact-info {
+    flex: 1;
+
+    h3 {
+        font-size: 1.5rem;
+        color: $color-text-main;
+        margin-bottom: $spacing-md;
+    }
+
+    p {
+        color: $color-text-muted;
+        margin-bottom: $spacing-lg;
+    }
+
+    .info-item {
+        margin-bottom: $spacing-md;
+
+        .label {
+            font-weight: $font-weight-bold;
+            color: $color-text-main;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .value {
+            color: $color-accent;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .social-links-large {
+        display: flex;
+        gap: $spacing-md;
+        margin-top: $spacing-xl;
+
+        .social-btn {
+            padding: 0.6rem 1.2rem;
+            border: 1px solid $color-border;
+            border-radius: 4px;
+            color: $color-text-main;
+            transition: all 0.3s ease;
+
+            &:hover {
+                border-color: $color-accent;
+                color: $color-accent;
+                background-color: rgba($color-accent, 0.05);
+            }
+        }
+    }
+}
+
+.contact-form-wrapper {
+    flex: 1.5;
+    background-color: $color-bg-card;
+    padding: $spacing-lg;
+    border-radius: 8px;
+    border: 1px solid $color-border;
+}
+
+.form-group {
+    margin-bottom: $spacing-lg;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $color-text-main;
+        font-size: 0.95rem;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.8rem;
+        background-color: rgba($color-bg-dark, 0.5);
+        border: 1px solid $color-border;
+        border-radius: 4px;
+        color: $color-text-main;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $color-accent;
+        }
+
+        &.error {
+            border-color: #ef4444; // Red for error
+        }
+    }
+
+    .error-msg {
+        display: block;
+        margin-top: 0.4rem;
+        color: #ef4444;
+        font-size: 0.8rem;
+    }
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: $color-accent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: $font-weight-bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover:not(:disabled) {
+        background-color: lighten($color-accent, 5%);
+    }
+
+    &:disabled {
+        background-color: $color-border;
+        cursor: not-allowed;
+        color: $color-text-muted;
+    }
+}

@@ -1,0 +1,52 @@
+@use 'assets/styles/variables' as *;
+
+.footer {
+    background-color: darken($color-bg-dark, 2%);
+    border-top: 1px solid $color-border;
+    padding: $spacing-lg 0;
+    margin-top: auto;
+    /* Push to bottom if content is short, assuming flex col layout on app-root/main */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+
+    .copyright {
+        color: $color-text-main;
+        font-weight: $font-weight-medium;
+    }
+
+    .rights {
+        font-size: 0.85rem;
+        color: $color-text-muted;
+    }
+}
+
+.footer-right {
+    display: flex;
+    gap: $spacing-md;
+}
+
+.social-link {
+    font-size: 0.9rem;
+    color: $color-text-muted;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $color-accent;
+    }
+}
